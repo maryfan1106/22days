@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		57B903012466524D00119788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B903002466524D00119788 /* AppDelegate.swift */; };
 		57B903032466524D00119788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B903022466524D00119788 /* SceneDelegate.swift */; };
-		57B903052466524D00119788 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B903042466524D00119788 /* ViewController.swift */; };
 		57B903082466524D00119788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B903062466524D00119788 /* Main.storyboard */; };
 		57B9030A2466525100119788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B903092466525100119788 /* Assets.xcassets */; };
 		57B9030D2466525100119788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B9030B2466525100119788 /* LaunchScreen.storyboard */; };
+		57B9031524665B8400119788 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9031424665B8400119788 /* HomeViewController.swift */; };
+		57B9031724668DC000119788 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9031624668DC000119788 /* Story.swift */; };
+		57B9031C24669BAC00119788 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9031B24669BAC00119788 /* StoryCollectionViewCell.swift */; };
+		57B9031E2466D3DF00119788 /* StoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9031D2466D3DF00119788 /* StoryDetailsViewController.swift */; };
+		57B903202466E95700119788 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9031F2466E95700119788 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57B902FD2466524D00119788 /* 22days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 22days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B903002466524D00119788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B903022466524D00119788 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57B903042466524D00119788 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		57B903072466524D00119788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57B903092466525100119788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57B9030C2466525100119788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57B9030E2466525100119788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57B9031424665B8400119788 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		57B9031624668DC000119788 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		57B9031B24669BAC00119788 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		57B9031D2466D3DF00119788 /* StoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailsViewController.swift; sourceTree = "<group>"; };
+		57B9031F2466E95700119788 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +65,34 @@
 			isa = PBXGroup;
 			children = (
 				57B903002466524D00119788 /* AppDelegate.swift */,
+				57B90318246697BF00119788 /* model */,
+				57B9031A2466980500119788 /* HomeScreen */,
 				57B903022466524D00119788 /* SceneDelegate.swift */,
-				57B903042466524D00119788 /* ViewController.swift */,
+				57B9031F2466E95700119788 /* PaddingLabel.swift */,
+				57B9031D2466D3DF00119788 /* StoryDetailsViewController.swift */,
 				57B903062466524D00119788 /* Main.storyboard */,
 				57B903092466525100119788 /* Assets.xcassets */,
 				57B9030B2466525100119788 /* LaunchScreen.storyboard */,
 				57B9030E2466525100119788 /* Info.plist */,
 			);
 			path = 22days;
+			sourceTree = "<group>";
+		};
+		57B90318246697BF00119788 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				57B9031624668DC000119788 /* Story.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		57B9031A2466980500119788 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				57B9031424665B8400119788 /* HomeViewController.swift */,
+				57B9031B24669BAC00119788 /* StoryCollectionViewCell.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B903052466524D00119788 /* ViewController.swift in Sources */,
+				57B9031C24669BAC00119788 /* StoryCollectionViewCell.swift in Sources */,
+				57B903202466E95700119788 /* PaddingLabel.swift in Sources */,
 				57B903012466524D00119788 /* AppDelegate.swift in Sources */,
 				57B903032466524D00119788 /* SceneDelegate.swift in Sources */,
+				57B9031524665B8400119788 /* HomeViewController.swift in Sources */,
+				57B9031E2466D3DF00119788 /* StoryDetailsViewController.swift in Sources */,
+				57B9031724668DC000119788 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
