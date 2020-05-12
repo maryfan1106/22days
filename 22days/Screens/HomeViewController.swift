@@ -11,7 +11,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
     // MARK:- IBOutlets
-    
+    @IBOutlet weak var themeToggle: UISwitch!
+    @IBOutlet weak var blurTheme: UIVisualEffectView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addNewStoryButton: UIButton!
@@ -22,11 +23,25 @@ class HomeViewController: UIViewController {
         present(selectionVC, animated: true, completion: nil)
     }
     
+    @IBAction func themeToggled(_ sender: UISwitch) {
+        self.isDarkMode = !sender.isOn
+        saveStylePreference()
+        updateStyle()
+    }
+    
+    var isDarkMode = false
+    let defaults = UserDefaults.standard
+    
+    struct Keys {
+        static let prefersDarkMode  = "prefersDarkMode"
+    }
+    
     // MARK:- UICollectionViewDataSource
     
     private var stories = [Story]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkForStylePreference()
         Service.sharedInstance.getStories { (data, err) in
             self.stories = data!
             DispatchQueue.main.async {
@@ -64,6 +79,27 @@ extension HomeViewController: UICollectionViewDataSource {
             destination.story = stories[index.row]
         }
     }
+    
+    func saveStylePreference() {
+        defaults.set(isDarkMode, forKey: Keys.prefersDarkMode)
+    }
+    
+    func checkForStylePreference() {
+        let prefersDarkMode = defaults.bool(forKey: Keys.prefersDarkMode)
+        
+        if prefersDarkMode {
+            isDarkMode = true
+            updateStyle()
+            self.themeToggle.setOn(false, animated: true)
+        }
+    }
+    
+    func updateStyle() {
+        UIView.animate(withDuration: 0.4) {
+            self.blurTheme.effect = self.isDarkMode ? UIBlurEffect(style: .dark) : UIBlurEffect(style: .light)
+        }
+    }
+    
 }
 
 extension HomeViewController: UIScrollViewDelegate {

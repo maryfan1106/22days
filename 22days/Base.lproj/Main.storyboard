@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Mary!" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfh-Kg-4lr">
-                                            <rect key="frame" x="20" y="134.5" width="104.5" height="28"/>
+                                            <rect key="frame" x="20" y="135" width="202" height="28"/>
                                             <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -119,20 +119,25 @@
                                                 <action selector="addNewStoryTapped:" destination="pHw-qu-Ubq" eventType="touchUpInside" id="oLn-Tk-euy"/>
                                             </connections>
                                         </button>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-jJ-wEN">
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BmD-RK-0hd">
                                             <rect key="frame" x="345" y="131.5" width="51" height="31"/>
+                                            <color key="onTintColor" red="1" green="0.91454409246575341" blue="0.65303938356164382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="themeToggled:" destination="pHw-qu-Ubq" eventType="valueChanged" id="Rgo-zo-ZTF"/>
+                                            </connections>
                                         </switch>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="rfh-Kg-4lr" firstAttribute="leading" secondItem="H7j-14-mcO" secondAttribute="leading" constant="20" id="7OC-gW-C1N"/>
-                                        <constraint firstAttribute="trailing" secondItem="2yX-jJ-wEN" secondAttribute="trailing" constant="20" id="KoN-fX-fcQ"/>
+                                        <constraint firstItem="rfh-Kg-4lr" firstAttribute="trailing" secondItem="3k8-5e-YLg" secondAttribute="trailing" id="7VZ-Qc-LPL"/>
                                         <constraint firstItem="fUo-Ow-t8G" firstAttribute="centerY" secondItem="H7j-14-mcO" secondAttribute="centerY" id="PsG-L9-ivc"/>
-                                        <constraint firstItem="fUo-Ow-t8G" firstAttribute="top" secondItem="rfh-Kg-4lr" secondAttribute="bottom" constant="20" id="R5p-nC-1Y7"/>
                                         <constraint firstItem="fUo-Ow-t8G" firstAttribute="leading" secondItem="H7j-14-mcO" secondAttribute="leadingMargin" id="eWw-Dc-tkv"/>
+                                        <constraint firstItem="rfh-Kg-4lr" firstAttribute="leading" secondItem="H7j-14-mcO" secondAttribute="leading" constant="20" id="fad-1Z-iVu"/>
+                                        <constraint firstItem="fUo-Ow-t8G" firstAttribute="top" secondItem="rfh-Kg-4lr" secondAttribute="bottom" constant="19.5" id="hPT-LV-t2t"/>
+                                        <constraint firstAttribute="trailing" secondItem="BmD-RK-0hd" secondAttribute="trailing" constant="20" id="iKw-Uq-vp1"/>
                                         <constraint firstItem="fUo-Ow-t8G" firstAttribute="trailing" secondItem="H7j-14-mcO" secondAttribute="trailingMargin" id="lyO-sZ-703"/>
-                                        <constraint firstItem="fUo-Ow-t8G" firstAttribute="top" secondItem="2yX-jJ-wEN" secondAttribute="bottom" constant="20" id="o31-JE-gSk"/>
                                         <constraint firstItem="3k8-5e-YLg" firstAttribute="centerX" secondItem="fUo-Ow-t8G" secondAttribute="centerX" id="oyv-UY-WwO"/>
                                         <constraint firstItem="3k8-5e-YLg" firstAttribute="top" secondItem="fUo-Ow-t8G" secondAttribute="bottom" constant="7.5" id="vB3-uQ-vK6"/>
+                                        <constraint firstItem="fUo-Ow-t8G" firstAttribute="top" secondItem="BmD-RK-0hd" secondAttribute="bottom" constant="20" id="zZH-ft-Bh4"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>
@@ -154,7 +159,9 @@
                     <connections>
                         <outlet property="addNewStoryButton" destination="3k8-5e-YLg" id="0fQ-q9-g3S"/>
                         <outlet property="backgroundImageView" destination="OdU-oT-UYG" id="bmk-yO-ciu"/>
+                        <outlet property="blurTheme" destination="Bds-u0-JsF" id="7yD-jV-kPB"/>
                         <outlet property="collectionView" destination="fUo-Ow-t8G" id="oQV-yu-lE1"/>
+                        <outlet property="themeToggle" destination="BmD-RK-0hd" id="v6F-Y4-VfG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7g-Qw-SnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,7 +182,7 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iR8-O8-KPm">
                                 <rect key="frame" x="0.0" y="241.5" width="414" height="600.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MsV-Zg-bsB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="600.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tRZ-47-ArX">
@@ -194,7 +201,7 @@
                                         <constraint firstItem="tRZ-47-ArX" firstAttribute="leading" secondItem="MsV-Zg-bsB" secondAttribute="leading" constant="8" id="z7n-1n-z2Z"/>
                                     </constraints>
                                 </view>
-                                <blurEffect style="systemUltraThinMaterialDark"/>
+                                <blurEffect style="light"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A snappy title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmc-gJ-NML" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
                                 <rect key="frame" x="8" y="30" width="398" height="28"/>
