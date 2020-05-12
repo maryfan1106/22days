@@ -19,7 +19,6 @@ class StoryDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         storyTitleLabel.text = story.title
         storyDateLabel.text = story.date
         storyReasonLabel.text = story.reason
