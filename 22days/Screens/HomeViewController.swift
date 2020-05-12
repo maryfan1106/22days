@@ -17,13 +17,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var addNewStoryButton: UIButton!
     
     // MARK:- UICollectionViewDataSource
+    
     private var stories = [Story]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        Story.getStories { (data, err) in
+        Service.sharedInstance.getStories { (data, err) in
             self.stories = data!
             DispatchQueue.main.async {
-                print(self.stories)
                 self.collectionView.reloadData()
             }
         }
@@ -61,11 +61,6 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: UIScrollViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let storyView = StoryDetailsViewController.instantiate()
-//        self.navigationController?.pushViewController(storyView, animated: true)
-//    }
-    
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing

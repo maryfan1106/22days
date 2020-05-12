@@ -1,33 +1,16 @@
 //
-//  Story.swift
+//  service.swift
 //  22days
 //
-//  Created by Mary Fan on 5/9/20.
+//  Created by Mary Fan on 5/12/20.
 //  Copyright © 2020 Mary Fan. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Story: Decodable {
-    // MARK:- Public API
-    var date = ""
-    var title = ""
-    var mood = ""
-    var reason = ""
-    var story = ""
-    var backgroundImage = ""
-    
-    init(date: String, title: String, mood: String, reason: String, story: String, backgroundImage: String) {
-        self.date = date
-        self.title = title
-        self.mood = mood
-        self.reason = reason
-        self.story = story
-        self.backgroundImage = backgroundImage
-    }
-    
-    // MARK:- Private
-    static func getStories(completionHandler: @escaping ([Story]?, Error?) -> Void) {
+class Service {
+    static let sharedInstance = Service()
+    func getStories(completionHandler: @escaping ([Story]?, Error?) -> Void) {
         guard let url = URL(string: "https://twentytwodays.herokuapp.com/stories") else {
             completionHandler([
                 Story(date: "May 1, 2020", title: "Moody Blues", mood: "happy", reason: "Work", story: "Had a great day at work today! Did really well in the standup and met some really cool people.", backgroundImage: "image1"),
@@ -48,14 +31,13 @@ class Story: Decodable {
             if let data = data {
                 do {
                     let stories = try JSONDecoder().decode([Story].self, from: data)
-                    print(stories)
                     completionHandler(stories, nil)
                 } catch {
-                  print(error)
+                    print(error)
+                    completionHandler(nil, error)
                 }
             }
         }).resume()
         
     }
-    
 }
