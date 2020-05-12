@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5733CD0A246A4BF900C0130B /* StoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733CD09246A4BF900C0130B /* StoryDetailsViewController.swift */; };
 		5733CD0D246AA20200C0130B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733CD0C246AA20200C0130B /* Service.swift */; };
+		5733CD0F246AA93300C0130B /* NewStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733CD0E246AA93300C0130B /* NewStoryViewController.swift */; };
 		57B903012466524D00119788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B903002466524D00119788 /* AppDelegate.swift */; };
 		57B903032466524D00119788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B903022466524D00119788 /* SceneDelegate.swift */; };
 		57B903082466524D00119788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B903062466524D00119788 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		5733CD09246A4BF900C0130B /* StoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailsViewController.swift; sourceTree = "<group>"; };
 		5733CD0C246AA20200C0130B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		5733CD0E246AA93300C0130B /* NewStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStoryViewController.swift; sourceTree = "<group>"; };
 		57B902FD2466524D00119788 /* 22days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 22days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B903002466524D00119788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B903022466524D00119788 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				5733CD09246A4BF900C0130B /* StoryDetailsViewController.swift */,
 				57B9031424665B8400119788 /* HomeViewController.swift */,
+				5733CD0E246AA93300C0130B /* NewStoryViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				5733CD0D246AA20200C0130B /* Service.swift in Sources */,
 				57B903202466E95700119788 /* PaddingLabel.swift in Sources */,
 				57B903012466524D00119788 /* AppDelegate.swift in Sources */,
+				5733CD0F246AA93300C0130B /* NewStoryViewController.swift in Sources */,
 				57B903032466524D00119788 /* SceneDelegate.swift in Sources */,
 				57B9031524665B8400119788 /* HomeViewController.swift in Sources */,
 				5733CD0A246A4BF900C0130B /* StoryDetailsViewController.swift in Sources */,

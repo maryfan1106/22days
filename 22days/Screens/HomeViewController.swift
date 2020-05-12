@@ -16,6 +16,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addNewStoryButton: UIButton!
     
+    @IBAction func addNewStoryTapped(_ sender: UIButton ) {
+        let selectionVC = storyboard?.instantiateViewController(withIdentifier: "NewStoryViewController") as! NewStoryViewController
+        selectionVC.addNewStoryDelegate = self
+        present(selectionVC, animated: true, completion: nil)
+    }
+    
     // MARK:- UICollectionViewDataSource
     
     private var stories = [Story]()
@@ -70,5 +76,14 @@ extension HomeViewController: UIScrollViewDelegate {
         offset = CGPoint(x: roundedIndex*cellWidthIncludingSpacing-scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.pointee = offset
         
+    }
+}
+
+extension HomeViewController: AddNewStoryDelegate {
+    func didTapPost(story: Story) {
+        self.stories.append(story)
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }

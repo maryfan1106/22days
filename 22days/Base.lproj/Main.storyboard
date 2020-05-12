@@ -115,6 +115,9 @@
                                             <rect key="frame" x="192" y="721" width="30" height="54"/>
                                             <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="36"/>
                                             <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="addNewStoryTapped:" destination="pHw-qu-Ubq" eventType="touchUpInside" id="oLn-Tk-euy"/>
+                                            </connections>
                                         </button>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-jJ-wEN">
                                             <rect key="frame" x="345" y="131.5" width="51" height="31"/>
@@ -251,6 +254,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5f-yp-fe8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1013.0434782608696" y="-524.33035714285711"/>
+        </scene>
+        <!--New Story View Controller-->
+        <scene sceneID="mzV-Fp-LFi">
+            <objects>
+                <viewController storyboardIdentifier="NewStoryViewController" id="Gev-LA-BxL" customClass="NewStoryViewController" customModule="_2days" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gty-UQ-wjI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="8Ty-ii-7f2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6Q-jg-ZGJ">
+                                <rect key="frame" x="0.0" y="0.0" width="424" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oHG-KA-tcs">
+                                    <rect key="frame" x="0.0" y="0.0" width="424" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X1-9A-mff">
+                                            <rect key="frame" x="20" y="756" width="384" height="40"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                            <state key="normal" title="post"/>
+                                            <connections>
+                                                <action selector="postButtonTapped:" destination="Gev-LA-BxL" eventType="touchUpInside" id="Lsd-1h-Nqb"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="0X1-9A-mff" secondAttribute="trailing" constant="20" id="8Od-gm-SuQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="0X1-9A-mff" secondAttribute="bottom" constant="100" id="BGH-gu-eXL"/>
+                                        <constraint firstItem="0X1-9A-mff" firstAttribute="leading" secondItem="oHG-KA-tcs" secondAttribute="leading" constant="20" id="xng-T0-xpO"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="b6Q-jg-ZGJ" secondAttribute="bottom" id="2pd-u9-cK4"/>
+                            <constraint firstItem="b6Q-jg-ZGJ" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" id="KWl-ns-62q"/>
+                            <constraint firstAttribute="trailing" secondItem="b6Q-jg-ZGJ" secondAttribute="trailing" constant="-10" id="KqP-Or-aJu"/>
+                            <constraint firstItem="8Ty-ii-7f2" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" id="QdD-0n-S7Y"/>
+                            <constraint firstAttribute="bottom" secondItem="8Ty-ii-7f2" secondAttribute="bottom" id="RYE-Ui-7zd"/>
+                            <constraint firstAttribute="bottom" secondItem="8Ty-ii-7f2" secondAttribute="bottom" id="TLA-zm-NO9"/>
+                            <constraint firstItem="8Ty-ii-7f2" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" id="aoz-D4-ZND"/>
+                            <constraint firstItem="8Ty-ii-7f2" firstAttribute="trailing" secondItem="8Sf-UT-ena" secondAttribute="trailing" id="erX-WD-0q4"/>
+                            <constraint firstItem="b6Q-jg-ZGJ" firstAttribute="top" secondItem="Gty-UQ-wjI" secondAttribute="top" id="l9r-hk-Yk1"/>
+                            <constraint firstItem="8Ty-ii-7f2" firstAttribute="top" secondItem="Gty-UQ-wjI" secondAttribute="top" id="lPn-1B-Xb4"/>
+                            <constraint firstItem="8Ty-ii-7f2" firstAttribute="top" secondItem="Gty-UQ-wjI" secondAttribute="top" id="nNT-sN-SB6"/>
+                            <constraint firstItem="8Ty-ii-7f2" firstAttribute="trailing" secondItem="8Sf-UT-ena" secondAttribute="trailing" id="nfs-yQ-PQJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Sf-UT-ena"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1cg-vi-qVb"/>
+                    <connections>
+                        <outlet property="postButton" destination="0X1-9A-mff" id="DNk-DY-fvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LbG-Ys-7JZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247.82608695652175" y="200.89285714285714"/>
         </scene>
     </scenes>
     <resources>
