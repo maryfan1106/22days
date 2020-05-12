@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     // MARK:- IBOutlets
-    
+
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addNewStoryButton: UIButton!
@@ -43,14 +43,17 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return stories.count
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as?
+            StoryDetailsViewController, let index =
+            collectionView.indexPathsForSelectedItems?.first {
+            destination.story = stories[index.row]
+        }
+    }
 }
 
 extension HomeViewController: UIScrollViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let storyView = StoryDetailsViewController.instantiate()
-//        self.navigationController?.pushViewController(storyView, animated: true)
-//    }
-    
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing

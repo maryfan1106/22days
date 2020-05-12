@@ -102,6 +102,7 @@
                                                         <outlet property="moodImageView" destination="Dq6-Dk-Pam" id="e6m-bU-rmf"/>
                                                         <outlet property="storyDateLabel" destination="bh0-Td-feu" id="RHU-6e-9zO"/>
                                                         <outlet property="storyTitleLabel" destination="UU3-CX-bHA" id="PkA-03-apf"/>
+                                                        <segue destination="35f-ZH-4jM" kind="show" id="2au-Ao-dTa"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -115,18 +116,23 @@
                                             <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="36"/>
                                             <state key="normal" title="+"/>
                                         </button>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-jJ-wEN">
+                                            <rect key="frame" x="345" y="131.5" width="51" height="31"/>
+                                        </switch>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="rfh-Kg-4lr" firstAttribute="leading" secondItem="H7j-14-mcO" secondAttribute="leading" constant="20" id="7OC-gW-C1N"/>
+                                        <constraint firstAttribute="trailing" secondItem="2yX-jJ-wEN" secondAttribute="trailing" constant="20" id="KoN-fX-fcQ"/>
                                         <constraint firstItem="fUo-Ow-t8G" firstAttribute="centerY" secondItem="H7j-14-mcO" secondAttribute="centerY" id="PsG-L9-ivc"/>
                                         <constraint firstItem="fUo-Ow-t8G" firstAttribute="top" secondItem="rfh-Kg-4lr" secondAttribute="bottom" constant="20" id="R5p-nC-1Y7"/>
                                         <constraint firstItem="fUo-Ow-t8G" firstAttribute="leading" secondItem="H7j-14-mcO" secondAttribute="leadingMargin" id="eWw-Dc-tkv"/>
                                         <constraint firstItem="fUo-Ow-t8G" firstAttribute="trailing" secondItem="H7j-14-mcO" secondAttribute="trailingMargin" id="lyO-sZ-703"/>
+                                        <constraint firstItem="fUo-Ow-t8G" firstAttribute="top" secondItem="2yX-jJ-wEN" secondAttribute="bottom" constant="20" id="o31-JE-gSk"/>
                                         <constraint firstItem="3k8-5e-YLg" firstAttribute="centerX" secondItem="fUo-Ow-t8G" secondAttribute="centerX" id="oyv-UY-WwO"/>
                                         <constraint firstItem="3k8-5e-YLg" firstAttribute="top" secondItem="fUo-Ow-t8G" secondAttribute="bottom" constant="7.5" id="vB3-uQ-vK6"/>
                                     </constraints>
                                 </view>
-                                <blurEffect style="dark"/>
+                                <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -152,8 +158,104 @@
             </objects>
             <point key="canvasLocation" x="247.82608695652175" y="-524.33035714285711"/>
         </scene>
+        <!--Story Details View Controller-->
+        <scene sceneID="kXl-vm-8qd">
+            <objects>
+                <viewController id="35f-ZH-4jM" customClass="StoryDetailsViewController" customModule="_2days" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vM-ur-gMS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image11" translatesAutoresizingMaskIntoConstraints="NO" id="9Kx-FV-Pyp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iR8-O8-KPm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MsV-Zg-bsB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A snappy title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmc-gJ-NML" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="30" width="398" height="28"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 8, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp2-Y8-mee" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="78" width="398" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-Ce-DjV" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="121.5" width="398" height="20"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tRZ-47-ArX">
+                                            <rect key="frame" x="8" y="171.5" width="398" height="640.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="U46-tR-uHW">
+                                            <rect key="frame" x="216" y="8" width="190" height="156"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="tRZ-47-ArX" secondAttribute="bottom" constant="30" id="JpP-nT-EVG"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rp2-Y8-mee" secondAttribute="trailing" constant="8" id="Pca-a8-Krf"/>
+                                        <constraint firstItem="tmc-gJ-NML" firstAttribute="leading" secondItem="MsV-Zg-bsB" secondAttribute="leading" constant="8" id="Rpc-5j-qN8"/>
+                                        <constraint firstItem="Rp2-Y8-mee" firstAttribute="leading" secondItem="MsV-Zg-bsB" secondAttribute="leading" constant="8" id="VdY-5P-axJ"/>
+                                        <constraint firstItem="Rp2-Y8-mee" firstAttribute="top" secondItem="tmc-gJ-NML" secondAttribute="bottom" constant="20" id="Z5G-78-n1Y"/>
+                                        <constraint firstAttribute="trailing" secondItem="tmc-gJ-NML" secondAttribute="trailing" constant="8" id="d7E-BO-ZhH"/>
+                                        <constraint firstItem="tmc-gJ-NML" firstAttribute="top" secondItem="MsV-Zg-bsB" secondAttribute="top" constant="30" id="h5Z-aT-6h4"/>
+                                        <constraint firstItem="tRZ-47-ArX" firstAttribute="leading" secondItem="MsV-Zg-bsB" secondAttribute="leading" constant="8" id="i4q-xj-niC"/>
+                                        <constraint firstItem="tRZ-47-ArX" firstAttribute="top" secondItem="xbv-Ce-DjV" secondAttribute="bottom" constant="30" id="onT-sH-Mfd"/>
+                                        <constraint firstItem="xbv-Ce-DjV" firstAttribute="leading" secondItem="MsV-Zg-bsB" secondAttribute="leading" constant="8" id="qZH-Wa-kqt"/>
+                                        <constraint firstAttribute="trailing" secondItem="tRZ-47-ArX" secondAttribute="trailing" constant="8" id="tAU-jj-qaL"/>
+                                        <constraint firstItem="xbv-Ce-DjV" firstAttribute="top" secondItem="Rp2-Y8-mee" secondAttribute="bottom" constant="20" id="uCu-2y-FtV"/>
+                                        <constraint firstAttribute="trailing" secondItem="xbv-Ce-DjV" secondAttribute="trailing" constant="8" id="upn-Bt-TfM"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9Kx-FV-Pyp" firstAttribute="top" secondItem="6vM-ur-gMS" secondAttribute="top" id="V8u-oJ-SN2"/>
+                            <constraint firstItem="9Kx-FV-Pyp" firstAttribute="leading" secondItem="WrI-vs-TlU" secondAttribute="leading" id="XKt-oX-Ghk"/>
+                            <constraint firstItem="iR8-O8-KPm" firstAttribute="top" secondItem="6vM-ur-gMS" secondAttribute="top" id="Xaw-Dx-f1d"/>
+                            <constraint firstAttribute="bottom" secondItem="9Kx-FV-Pyp" secondAttribute="bottom" id="aML-I2-0O0"/>
+                            <constraint firstItem="iR8-O8-KPm" firstAttribute="leading" secondItem="WrI-vs-TlU" secondAttribute="leading" id="fA5-33-mKd"/>
+                            <constraint firstItem="iR8-O8-KPm" firstAttribute="trailing" secondItem="WrI-vs-TlU" secondAttribute="trailing" id="fCQ-Rr-x9x"/>
+                            <constraint firstAttribute="bottom" secondItem="iR8-O8-KPm" secondAttribute="bottom" id="fp3-Op-Ee8"/>
+                            <constraint firstItem="9Kx-FV-Pyp" firstAttribute="trailing" secondItem="WrI-vs-TlU" secondAttribute="trailing" id="isg-mI-KRe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WrI-vs-TlU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YN2-iv-nQi"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="9Kx-FV-Pyp" id="uyg-EY-FtV"/>
+                        <outlet property="moodImageView" destination="U46-tR-uHW" id="uWn-8H-xWu"/>
+                        <outlet property="storyDateLabel" destination="Rp2-Y8-mee" id="BDw-f0-45O"/>
+                        <outlet property="storyReasonLabel" destination="xbv-Ce-DjV" id="rjm-8X-RZh"/>
+                        <outlet property="storyTextView" destination="tRZ-47-ArX" id="fs3-cW-OEP"/>
+                        <outlet property="storyTitleLabel" destination="tmc-gJ-NML" id="qtO-dB-Eo3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5f-yp-fe8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013.0434782608696" y="-524.33035714285711"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="happy" width="512" height="512"/>
+        <image name="image11" width="900" height="1350"/>
         <image name="image2" width="900" height="1350"/>
         <image name="image4" width="900" height="1350"/>
         <image name="sad" width="512" height="512"/>
