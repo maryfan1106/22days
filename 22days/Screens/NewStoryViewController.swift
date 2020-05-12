@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AudioToolbox
 
 protocol AddNewStoryDelegate {
     func didTapPost(story: Story)
@@ -21,6 +23,7 @@ class NewStoryViewController: UIViewController {
         addNewStoryDelegate.didTapPost(story:
             Story(date: "May 12, 2020", title: "Moody Purples?", mood: "sad", reason: "school", story: "iOS dev is killing me.", backgroundImage: "image10")
         )
+        AudioServicesPlayAlertSound(1306)
         dismiss(animated: true, completion: nil)
     }
     
