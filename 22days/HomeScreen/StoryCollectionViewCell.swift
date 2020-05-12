@@ -23,7 +23,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var storyDateLabel: PaddingLabel!
     
     private func updateUI() {
-        backgroundImageView?.image! = story.backgroundImage
+        backgroundImageView?.image! = UIImage(named: story.backgroundImage)!
         moodImageView?.image! = UIImage(named: story.mood)!
         storyTitleLabel?.text! = story.title
         storyDateLabel?.text! = story.date

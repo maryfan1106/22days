@@ -24,7 +24,7 @@ class StoryDetailsViewController: UIViewController {
         storyDateLabel.text = story.date
         storyReasonLabel.text = story.reason
         storyTextView.text = story.story
-        backgroundImageView.image = story.backgroundImage
+        backgroundImageView.image = UIImage(named: story.backgroundImage)
         moodImageView.image = UIImage(named: story.mood)
     }
 
