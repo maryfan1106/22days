@@ -10,12 +10,13 @@ import UIKit
 
 class StoryDetailsViewController: UIViewController {
     var story: Story!
-    @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var moodImageView: UIImageView!
+    
     @IBOutlet weak var storyTitleLabel: PaddingLabel!
     @IBOutlet weak var storyDateLabel: PaddingLabel!
     @IBOutlet weak var storyReasonLabel: PaddingLabel!
     @IBOutlet weak var storyTextView: UITextView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var moodImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

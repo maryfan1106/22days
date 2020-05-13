@@ -9,20 +9,18 @@
 import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
-    // MARK:- Public
     var story: Story! {
         didSet {
             updateUI()
         }
     }
-    
-    // MARK:- Private
+
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var moodImageView: UIImageView!
     @IBOutlet weak var storyTitleLabel: PaddingLabel!
     @IBOutlet weak var storyDateLabel: PaddingLabel!
     
-    private func updateUI() {
+    func updateUI() {
         backgroundImageView?.image! = UIImage(named: story.backgroundImage)!
         moodImageView?.image! = UIImage(named: story.mood)!
         storyTitleLabel?.text! = story.title
@@ -34,5 +32,4 @@ class StoryCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 20.0
         self.clipsToBounds = true
     }
-    
 }

@@ -9,8 +9,18 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-    // MARK:- IBOutlets
+    var stories = [Story]()
+    var isDarkMode = false
+    let defaults = UserDefaults.standard
+    
+    struct Storyboard {
+        static let CellIdentifier = "Story Cell"
+    }
+    
+    struct Keys {
+        static let prefersDarkMode  = "prefersDarkMode"
+    }
+    
     @IBOutlet weak var themeToggle: UISwitch!
     @IBOutlet weak var blurTheme: UIVisualEffectView!
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -29,16 +39,6 @@ class HomeViewController: UIViewController {
         updateStyle()
     }
     
-    var isDarkMode = false
-    let defaults = UserDefaults.standard
-    
-    struct Keys {
-        static let prefersDarkMode  = "prefersDarkMode"
-    }
-    
-    // MARK:- UICollectionViewDataSource
-    
-    private var stories = [Story]()
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForStylePreference()
@@ -50,43 +50,12 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private struct Storyboard {
-        static let CellIdentifier = "Story Cell"
-    }
-
-}
-
-extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.CellIdentifier, for: indexPath) as! StoryCollectionViewCell
-        
-        cell.story = self.stories[indexPath.item]
-        
-        return cell
-    }
-    
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stories.count
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as?
-            StoryDetailsViewController, let index =
-            collectionView.indexPathsForSelectedItems?.first {
-            destination.story = stories[index.row]
-        }
-    }
-    
     func saveStylePreference() {
         defaults.set(isDarkMode, forKey: Keys.prefersDarkMode)
     }
     
     func checkForStylePreference() {
         let prefersDarkMode = defaults.bool(forKey: Keys.prefersDarkMode)
-        
         if prefersDarkMode {
             isDarkMode = true
             updateStyle()
@@ -99,7 +68,31 @@ extension HomeViewController: UICollectionViewDataSource {
             self.blurTheme.effect = self.isDarkMode ? UIBlurEffect(style: .dark) : UIBlurEffect(style: .light)
         }
     }
+
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.CellIdentifier, for: indexPath) as! StoryCollectionViewCell
+        cell.story = self.stories[indexPath.item]
+        return cell
+    }
     
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return stories.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as?
+            StoryDetailsViewController, let index =
+            collectionView.indexPathsForSelectedItems?.first {
+            destination.story = stories[index.row]
+        }
+    }
 }
 
 extension HomeViewController: UIScrollViewDelegate {
@@ -111,13 +104,12 @@ extension HomeViewController: UIScrollViewDelegate {
         let roundedIndex = round(index)
         offset = CGPoint(x: roundedIndex*cellWidthIncludingSpacing-scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.pointee = offset
-        
     }
 }
 
 extension HomeViewController: AddNewStoryDelegate {
     func didTapPost(story: Story) {
-        self.stories.append(story)
+        self.stories.insert(story, at: 0)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
