@@ -182,11 +182,11 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iR8-O8-KPm">
                                 <rect key="frame" x="0.0" y="241.5" width="414" height="600.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MsV-Zg-bsB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="600.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tRZ-47-ArX">
-                                            <rect key="frame" x="8" y="8" width="398" height="584.5"/>
+                                            <rect key="frame" x="8" y="8" width="398" height="585"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -275,47 +275,126 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="8Ty-ii-7f2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ty-ii-7f2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehq-GS-xBV" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                <rect key="frame" x="8" y="197" width="398" height="20"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpe-H0-BSl" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                <rect key="frame" x="8" y="157" width="398" height="20"/>
+                                <string key="text">Sad		Meh		Happy</string>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPq-Dl-Mm8" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                <rect key="frame" x="8" y="122" width="398" height="20"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 14, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaG-3m-JnL" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                <rect key="frame" x="8" y="78" width="398" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6Q-jg-ZGJ">
-                                <rect key="frame" x="0.0" y="0.0" width="424" height="896"/>
+                                <rect key="frame" x="20" y="332" width="374" height="380"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oHG-KA-tcs">
-                                    <rect key="frame" x="0.0" y="0.0" width="424" height="896"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="380"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X1-9A-mff">
-                                            <rect key="frame" x="20" y="756" width="384" height="40"/>
-                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
-                                            <state key="normal" title="post"/>
-                                            <connections>
-                                                <action selector="postButtonTapped:" destination="Gev-LA-BxL" eventType="touchUpInside" id="Lsd-1h-Nqb"/>
-                                            </connections>
-                                        </button>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5qq-2O-pl6">
+                                            <rect key="frame" x="8" y="8" width="358" height="364"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <mutableString key="text">According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible. Yellow, black. Yellow, black. Yellow, black. Yellow, black. Ooh, black and yellow! Let's shake it up a little. Barry! Breakfast is ready! Ooming! Hang on a second. Hello? - Barry? - Adam? - Oan you believe this is happening? - I can't. I'll pick you up. Looking sharp. Use the stairs. Your father paid good money for those. Sorry. I'm excited. Here's the graduate. We're very proud of you, son. A perfect report card, all B's. </mutableString>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="0X1-9A-mff" secondAttribute="trailing" constant="20" id="8Od-gm-SuQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="0X1-9A-mff" secondAttribute="bottom" constant="100" id="BGH-gu-eXL"/>
-                                        <constraint firstItem="0X1-9A-mff" firstAttribute="leading" secondItem="oHG-KA-tcs" secondAttribute="leading" constant="20" id="xng-T0-xpO"/>
+                                        <constraint firstItem="5qq-2O-pl6" firstAttribute="top" secondItem="oHG-KA-tcs" secondAttribute="top" constant="8" id="Oz8-JI-jEj"/>
+                                        <constraint firstAttribute="bottom" secondItem="5qq-2O-pl6" secondAttribute="bottom" constant="8" id="fFO-Ba-6d0"/>
+                                        <constraint firstItem="5qq-2O-pl6" firstAttribute="leading" secondItem="oHG-KA-tcs" secondAttribute="leading" constant="8" id="lB4-iu-sZG"/>
+                                        <constraint firstAttribute="trailing" secondItem="5qq-2O-pl6" secondAttribute="trailing" constant="8" id="uo5-rM-HjY"/>
                                     </constraints>
                                 </view>
-                                <blurEffect style="regular"/>
+                                <blurEffect style="light"/>
                             </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A snappy title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN6-hN-Mpe" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                <rect key="frame" x="8" y="30" width="398" height="28"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMG-eP-xbJ" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                <rect key="frame" x="8" y="267" width="398" height="20"/>
+                                <string key="text">Food		Work		School</string>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXm-sA-gOO" customClass="PaddingLabel" customModule="_2days" customModuleProvider="target">
+                                <rect key="frame" x="8" y="232" width="398" height="20"/>
+                                <string key="text">Friends	Family		Relationship</string>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X1-9A-mff">
+                                <rect key="frame" x="20" y="757" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                <state key="normal" title="post"/>
+                                <connections>
+                                    <action selector="postButtonTapped:" destination="Gev-LA-BxL" eventType="touchUpInside" id="Lsd-1h-Nqb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="b6Q-jg-ZGJ" secondAttribute="bottom" id="2pd-u9-cK4"/>
-                            <constraint firstItem="b6Q-jg-ZGJ" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" id="KWl-ns-62q"/>
-                            <constraint firstAttribute="trailing" secondItem="b6Q-jg-ZGJ" secondAttribute="trailing" constant="-10" id="KqP-Or-aJu"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="trailing" secondItem="b6Q-jg-ZGJ" secondAttribute="trailing" constant="20" id="0TM-Ad-AUu"/>
+                            <constraint firstItem="eXm-sA-gOO" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" constant="8" id="4MZ-t2-670"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="trailing" secondItem="eXm-sA-gOO" secondAttribute="trailing" constant="8" id="9GQ-ut-aJ3"/>
+                            <constraint firstItem="vMG-eP-xbJ" firstAttribute="top" secondItem="eXm-sA-gOO" secondAttribute="bottom" constant="15" id="BdO-EB-QgY"/>
+                            <constraint firstItem="b6Q-jg-ZGJ" firstAttribute="top" secondItem="vMG-eP-xbJ" secondAttribute="bottom" constant="45" id="CfA-A6-MC5"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="bottom" secondItem="0X1-9A-mff" secondAttribute="bottom" constant="75" id="D5v-uH-WKa"/>
+                            <constraint firstAttribute="trailing" secondItem="mN6-hN-Mpe" secondAttribute="trailing" constant="8" id="DbM-44-8kA"/>
+                            <constraint firstItem="vMG-eP-xbJ" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" constant="8" id="EJg-zK-Ghb"/>
+                            <constraint firstItem="mN6-hN-Mpe" firstAttribute="leading" secondItem="Gty-UQ-wjI" secondAttribute="leading" constant="8" id="IgQ-Uw-zWl"/>
+                            <constraint firstItem="b6Q-jg-ZGJ" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" constant="20" id="Lj3-Sp-XCO"/>
+                            <constraint firstItem="0X1-9A-mff" firstAttribute="top" secondItem="b6Q-jg-ZGJ" secondAttribute="bottom" constant="45" id="Lqt-Rc-NpJ"/>
+                            <constraint firstItem="uPq-Dl-Mm8" firstAttribute="top" secondItem="WaG-3m-JnL" secondAttribute="bottom" constant="20" id="MMX-FV-tqT"/>
+                            <constraint firstItem="uPq-Dl-Mm8" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" constant="8" id="N7E-DU-NLB"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="trailing" secondItem="Cpe-H0-BSl" secondAttribute="trailing" constant="8" id="PFi-bM-ykU"/>
+                            <constraint firstItem="0X1-9A-mff" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" constant="20" id="PLR-AS-eP0"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="trailing" secondItem="ehq-GS-xBV" secondAttribute="trailing" constant="8" id="Pqg-Iu-B8Z"/>
                             <constraint firstItem="8Ty-ii-7f2" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" id="QdD-0n-S7Y"/>
+                            <constraint firstItem="mN6-hN-Mpe" firstAttribute="top" secondItem="Gty-UQ-wjI" secondAttribute="top" constant="30" id="RUA-rY-ZFI"/>
                             <constraint firstAttribute="bottom" secondItem="8Ty-ii-7f2" secondAttribute="bottom" id="RYE-Ui-7zd"/>
+                            <constraint firstItem="ehq-GS-xBV" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" constant="8" id="Rdp-ua-3kt"/>
                             <constraint firstAttribute="bottom" secondItem="8Ty-ii-7f2" secondAttribute="bottom" id="TLA-zm-NO9"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="trailing" secondItem="WaG-3m-JnL" secondAttribute="trailing" constant="8" id="Umb-sF-MuA"/>
+                            <constraint firstItem="Cpe-H0-BSl" firstAttribute="top" secondItem="uPq-Dl-Mm8" secondAttribute="bottom" constant="15" id="UpI-l5-n1s"/>
+                            <constraint firstItem="Cpe-H0-BSl" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" constant="8" id="Z0W-zT-WcI"/>
                             <constraint firstItem="8Ty-ii-7f2" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" id="aoz-D4-ZND"/>
                             <constraint firstItem="8Ty-ii-7f2" firstAttribute="trailing" secondItem="8Sf-UT-ena" secondAttribute="trailing" id="erX-WD-0q4"/>
-                            <constraint firstItem="b6Q-jg-ZGJ" firstAttribute="top" secondItem="Gty-UQ-wjI" secondAttribute="top" id="l9r-hk-Yk1"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="trailing" secondItem="uPq-Dl-Mm8" secondAttribute="trailing" constant="8" id="iIJ-MI-2l0"/>
+                            <constraint firstItem="ehq-GS-xBV" firstAttribute="top" secondItem="Cpe-H0-BSl" secondAttribute="bottom" constant="20" id="jiA-lG-B13"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="bottom" secondItem="b6Q-jg-ZGJ" secondAttribute="bottom" constant="150" id="kak-zh-U4s"/>
                             <constraint firstItem="8Ty-ii-7f2" firstAttribute="top" secondItem="Gty-UQ-wjI" secondAttribute="top" id="lPn-1B-Xb4"/>
+                            <constraint firstItem="WaG-3m-JnL" firstAttribute="top" secondItem="mN6-hN-Mpe" secondAttribute="bottom" constant="20" id="lRz-E3-Knv"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="trailing" secondItem="0X1-9A-mff" secondAttribute="trailing" constant="20" id="n6o-BT-zoI"/>
                             <constraint firstItem="8Ty-ii-7f2" firstAttribute="top" secondItem="Gty-UQ-wjI" secondAttribute="top" id="nNT-sN-SB6"/>
                             <constraint firstItem="8Ty-ii-7f2" firstAttribute="trailing" secondItem="8Sf-UT-ena" secondAttribute="trailing" id="nfs-yQ-PQJ"/>
+                            <constraint firstItem="WaG-3m-JnL" firstAttribute="leading" secondItem="8Sf-UT-ena" secondAttribute="leading" constant="8" id="ona-pR-g12"/>
+                            <constraint firstItem="eXm-sA-gOO" firstAttribute="top" secondItem="ehq-GS-xBV" secondAttribute="bottom" constant="15" id="qGF-xu-apY"/>
+                            <constraint firstItem="8Sf-UT-ena" firstAttribute="trailing" secondItem="vMG-eP-xbJ" secondAttribute="trailing" constant="8" id="rHm-UI-mRT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Sf-UT-ena"/>
                     </view>
@@ -334,6 +413,7 @@
         <image name="image11" width="900" height="1350"/>
         <image name="image2" width="900" height="1350"/>
         <image name="image4" width="900" height="1350"/>
+        <image name="image5" width="900" height="1350"/>
         <image name="sad" width="512" height="512"/>
     </resources>
 </document>
